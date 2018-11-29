@@ -36,7 +36,7 @@
     </ul>
   </li>
   <li>
-    <h3>Start a new project</h3>
+    <h3>Let's build a project!</h3>
     <ul>
       <li>
         <h4>Create a new virtual environment</h4>
@@ -96,7 +96,7 @@
         </ol>
       </li>
       <li>
-        <h4>Setup proiect to use local_settings</h4>
+        <h4>Setup project to use local_settings</h4>
         <ol>
           <li>local_settings.py</li>
               from .settings import *

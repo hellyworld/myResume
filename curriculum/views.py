@@ -1,14 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from curriculum.models import Experience
 
 
-def index(request):
-    return render(request, 'base.html')
-
-
-def resume(request):
-    my_dictionary = {
-        'insert_me': 'Hello there, i am from views.py',
-        'second': "this is the second message!"
+def home(request):
+    all_experiences = Experience.objects.order_by("-id")
+    context = {
+        'all_experiences': all_experiences,
     }
-    return render(request, 'curriculum/resume.html', context=my_dictionary)
+
+    return render(request, 'base.html', context)

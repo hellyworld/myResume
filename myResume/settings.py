@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my APPS
     'curriculum',
+    # third-part APPS
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

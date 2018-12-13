@@ -1,0 +1,111 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+    color: #FFF;
+    background-color: #292b2c;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 80px;
+}
+
+nav {
+    background-color: #292b2c !important;
+    font-variant: small-caps !important;
+    z-index: 10;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color: #007bff !important;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 0.8rem;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: #007bff !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #007bff !important;
+}
+
+.navbar-right {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.jumbotron {
+    padding: 2rem 2rem;
+    margin-bottom: 0rem;
+    color: #e9ecef;
+    background-color: #292b2c;
+    border-radius: 0.2rem;
+}
+
+.bpu {
+    position: relative;
+    line-height: 20px;
+    text-align: left;
+    font-variant: small-caps;
+}
+
+.bpu::before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e9ecef;
+}
+
+.bpv {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #e9ecef;
+    vertical-align: middle;
+    background-color: #292b2c;
+}
+
+.bpw {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+}
+
+.afn, .afo {
+    margin-top: 3rem !important;
+}
+
+.afd, .afa {
+        margin-bottom: 2rem !important;
+}
+
+.fas, .fab, .FVIM {
+    color: #007bff;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}

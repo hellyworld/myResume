@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+
+{% if all_experiences %}
+{% for experience in all_experiences %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h3>{{ experience.company }}</h3>
+      <h6>{{ experience.position }}</h6>
+    </div>
+    <div class="col-md-4">
+      <h6 class="text-sm-left text-md-right text-muted">{{ experience.location }}</h6>
+      <h6 class="text-sm-left text-md-right text-muted">{{ experience.start_date|date:'M Y'}} -
+        {% if experience.end_date is null %}
+        Present
+        {% else %}
+        {{ experience.end_date|date:'M Y'}}
+        {% endif %}
+      </h6>
+    </div>
+  </div>
+  <a data-toggle="collapse" href="#multi_collapse_experiece_{{ experience.id }}">
+    <i class="far fa-caret-square-down"></i>
+    Details
+  </a>
+  <div class="container collapse multi-collapse" id="multi_collapse_experiece_{{ experience.id }}">
+    {{ experience.description | safe}}
+  </div>
+</div>
+<br>
+{% endfor %}
+{% else %}
+<h2>You don't have any experience, so please start your career!</h2>
+{% endif %}

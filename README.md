@@ -21,87 +21,87 @@
   * **What is a Web Framework?** - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. HTML, CSS, JS, bootstraps for responsive are integrated together, uploaded and hosted
   * **What will me build?** - We will make an web app with our resume. Open http://hellyworld.pythonanywhere.com/ 
 * **Let’s build a project**
-* **Create a new virtual environment** - Allow you to have a specific version of the packages: Python, Django, other API
-* Open a terminal in Atom
-* Move to .venvs folder
-* Create the new venv
-```
-virtualenv myResume
-```
-* **Activate the new venv**
-```
-source .../myResume/bin/activate
-pip freeze
-```
-* Install Django 2.1.3 - With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
-```
-pip install django
-pip freeze
-```
-* **Start a new project.**
-  * Move to projects folder
-  * Start the new project
-  ```
-  django-admin startproject myResume
-  ```
-  * **Project folders structure**
-    * myResume
-      * myResume
-        * **__init__.py** - This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package  
-        * **settings.py** - This is where you will store all your project settings
-        * **urls.py** - This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
-        * **wsgi.py** - This is a Python script that acts as the Web Server Gateway Interface. It will later on help us deploy our web app to production.
-    * **manage.py** - This is a Python script that will use a lot. It will be associates with many commands as we build our web app. Will execute parts of django from your project.
-  * **Run a Django server**
-  * Move to myResume folder
-  ```
-  python manage.py runserver
-  ```
-  ```
-  Performing system checks...
+ * **Create a new virtual environment** - Allow you to have a specific version of the packages: Python, Django, other API
+ * Open a terminal in Atom
+ * Move to .venvs folder
+ * Create the new venv
+ ```
+ virtualenv myResume
+ ```
+ * **Activate the new venv**
+ ```
+ source .../myResume/bin/activate
+ pip freeze
+ ```
+ * Install Django 2.1.3 - With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
+ ```
+ pip install django
+ pip freeze
+ ```
+ * **Start a new project.**
+   * Move to projects folder
+   * Start the new project
+   ```
+   django-admin startproject myResume
+   ```
+   * **Project folders structure**
+     * myResume
+       * myResume
+         * **__init__.py** - This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package  
+         * **settings.py** - This is where you will store all your project settings
+         * **urls.py** - This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
+         * **wsgi.py** - This is a Python script that acts as the Web Server Gateway Interface. It will later on help us deploy our web app to production.
+     * **manage.py** - This is a Python script that will use a lot. It will be associates with many commands as we build our web app. Will execute parts of django from your project.
+   * **Run a Django server**
+   * Move to myResume folder
+   ```
+   python manage.py runserver
+   ```
+   ```
+   Performing system checks...
 
-  System check identified no issues (0 silenced).
+   System check identified no issues (0 silenced).
 
 
-  You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, cont
-  enttypes, sessions.
-  Run 'python manage.py migrate' to apply them.
+   You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, cont
+   enttypes, sessions.
+   Run 'python manage.py migrate' to apply them.
 
-  November 15, 2018 - 13:55:34
-  Django version 2.1.3, using settings 'first_project.settings'
-  Starting development server at http://127.0.0.1:8000/
-  Quit the server with CONTROL-C.
-  ```
-  * Copy to your browser and run http://127.0.0.1:8000/ and BIG CONGRATULATION TO YOU!
-  * Warnings about migrations - A migrations allows you to move databases from one design to another, this is also reversible. You will migrate your database!
-  * migrate your database
-  ```
-  python manage.py migrate
-  ```
-  ```
-  Operations to perform:
-  Apply all migrations: admin, auth, contenttypes, sessions
+   November 15, 2018 - 13:55:34
+   Django version 2.1.3, using settings 'first_project.settings'
+   Starting development server at http://127.0.0.1:8000/
+   Quit the server with CONTROL-C.
+   ```
+   * Copy to your browser and run http://127.0.0.1:8000/ and BIG CONGRATULATION TO YOU!
+   * Warnings about migrations - A migrations allows you to move databases from one design to another, this is also reversible. You will migrate your database!
+   * migrate your database
+   ```
+   python manage.py migrate
+   ```
+   ```
+   Operations to perform:
+   Apply all migrations: admin, auth, contenttypes, sessions
 
-  Running migrations:
-  Applying contenttypes.0001_initial... OK
-  Applying auth.0001_initial... OK
-  Applying admin.0001_initial... OK
-  Applying admin.0002_logentry_remove_auto_add... OK
-  Applying admin.0003_logentry_add_action_flag_choices... OK
-  Applying contenttypes.0002_remove_content_type_name... OK
-  Applying auth.0002_alter_permission_name_max_length... OK
-  Applying auth.0003_alter_user_email_max_length... OK
-  Applying auth.0004_alter_user_username_opts... OK
-  Applying auth.0005_alter_user_last_login_null... OK
-  Applying auth.0006_require_contenttypes_0002... OK
-  Applying auth.0007_alter_validators_add_error_messages... OK
-  Applying auth.0008_alter_user_username_max_length... OK
-  Applying auth.0009_alter_user_last_name_max_length... OK
-  Applying sessions.0001_initial... OK
-  Create a superuser and access admin page
-  python manage.py createsuperuser
-  access http://127.0.0.1:8000/admin
-  ```
+   Running migrations:
+   Applying contenttypes.0001_initial... OK
+   Applying auth.0001_initial... OK
+   Applying admin.0001_initial... OK
+   Applying admin.0002_logentry_remove_auto_add... OK
+   Applying admin.0003_logentry_add_action_flag_choices... OK
+   Applying contenttypes.0002_remove_content_type_name... OK
+   Applying auth.0002_alter_permission_name_max_length... OK
+   Applying auth.0003_alter_user_email_max_length... OK
+   Applying auth.0004_alter_user_username_opts... OK
+   Applying auth.0005_alter_user_last_login_null... OK
+   Applying auth.0006_require_contenttypes_0002... OK
+   Applying auth.0007_alter_validators_add_error_messages... OK
+   Applying auth.0008_alter_user_username_max_length... OK
+   Applying auth.0009_alter_user_last_name_max_length... OK
+   Applying sessions.0001_initial... OK
+   Create a superuser and access admin page
+   python manage.py createsuperuser
+   access http://127.0.0.1:8000/admin
+   ```
   * Create a superuser and access admin page
   ``` python
   python manage.py createsuperuser
@@ -145,251 +145,240 @@ pip freeze
   pip freeze > requirements.txt
   pip install -r requirements.txt
 ```
-GitHub - first repository
-go to https://github.com/ and create a new repository myResume
-install git
-```
-apt-get install git-core
-```
-.gitignore
-build the file with https://www.gitignore.io/
-git configuration
-```git
-git config --global user.name "hellyworld"
-git config --global user.email "adrian.helerea@gmail.com"
-git init
-git remote add origin git@gitlab.com:hellyworld/myResume.git
-README.md
-git add .
-git commit -m "Initial commit"
-git push -u origin master
-```
+* **GitHub - first repository** - go to https://github.com/ and create a new repository myResume
+ * install git
+  ```
+  apt-get install git-core
+  ```
+  * .gitignore -build the file with https://www.gitignore.io/
+  * git configuration
+  ```
+  git config --global user.name "hellyworld"
+  git config --global user.email "adrian.helerea@gmail.com"
+  git init
+  git remote add origin git@gitlab.com:hellyworld/myResume.git
+  README.md
+  git add .
+  git commit -m "Initial commit"
+  git push -u origin master
+ ```
 ## Course 2
-Pull from GitLab
-Start a new Django app
+* **Start your word day!**
+ * git pull
+* **Start a new Django app**
+```
 python manage.py startapp curriculum
-App folders structure
-curriculum
-migrations
-This directory stores database specific information as it relates to the models
-__init__.py
-This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package
-admin.py
-You can register your models here which Django will then use them with Django’s admin interface. Build into Django
-apps.py
-Here you can place application specific configurations
-models.py
-Here you store the application’s data models
-tests.py
-Here you can store test functions to test your code
-views.py
-This is where you have functions that handle requests and return responses
-Configure the new app
-Add the app to settings.py
-Create mapping (urls, views, models and templates)
-Simple mapping direct to a view
-curriculum/views.py
-Import HttpResponse object from django.hhtp module and each view for this application will exist in that views.py as it is own individual function. In this instance we created index function. Each function has at least one argument. As a conventional we call it “request but can be named whatever. Returns a HttpResponse  with a text later will be a html.
-We need to map this view to the urls.py
-from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+```
+* **App folders structure**
+ * **curriculum**
+  * **migrations** - This directory stores database specific information as it relates to the models
+  * **__init__.py** - This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package
+  * **admin.py** - You can register your models here which Django will then use them with Django’s admin interface. Build into Django
+  * **apps.py** - Here you can place application specific configurations
+  * **models.py** - Here you store the application’s data models
+  * **tests.py** - Here you can store test functions to test your code
+  * **views.py** - This is where you have functions that handle requests and return responses
+* **Configure the new app**
+ * Add the app to settings.py
+ * Create mapping (urls, views, models and templates)
+  * Simple mapping direct to a view
+   * **curriculum/views.py**
+   Import HttpResponse object from django.hhtp module and each view for this application will exist in that views.py as it is own individual function. In this instance we created index function. Each function has at least one argument. As a conventional we call it “request but can be named whatever. Returns a HttpResponse  with a text later will be a html. We need to map this view to the urls.py
+   ```
+   from django.shortcuts import render
+   from django.http import HttpResponse
 
-def index(request):
-return HttpResponse("Hello World!")
+   def index(request):
+   return HttpResponse("Hello World!")
 
-def resume(request):
-return HttpResponse("This is my resume!")
-urls.py
-This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
-Django older than 2.0 format:
-This is using regular expressions and link back
+   def resume(request):
+   return HttpResponse("This is my resume!")
+   ```
+   * **urls.py**
+   This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
+    * **Django older than 2.0 format:**
+   ```python
+   from django.conf.urls import url
+   from django.contrib import admin
+   from curriculum import views
+
+   urlpatterns = [
+   url(r'^admin/', admin.site.urls),
+   url(r'^$', views.index, name='index'),
+   url(r'^resume/', views.resume, name=resume),
+   ]
+   ```
+   **Django 2.0  format:**
+
+   ```python
+   from django.contrib import admin
+   from django.urls import path
+   from curriculum import views
+
+   urlpatterns = [
+   path('admin/', admin.site.urls),
+   path('', views.index, name='index'),
+   path('resume', views.resume, name='resume'),
+   ]
+   ```
+   Mapping with include()
+   Under this method each application will own a urls.py file and will keep our project’s urls.py clean and modular
+   * **urls.py**
+   ```python
+   from django.contrib import admin
+   from django.urls import path, include
+
+   urlpatterns = [
+   path('admin/', admin.site.urls),
+   path('', include('curriculum.urls')),
+   ]
+   ```
+   * **curriculum/urls.py**
+   ```python
+   from django.urls import path
+   from curriculum import views
+
+   urlpatterns = [
+   path('', views.index, name='index'),
+   path('resume', views.resume, name='resume'),
+   ]
+   ```
+   * **curriculum/views.py**
+   ```
+   from django.shortcuts import render
+   from django.http import HttpResponse
+
+
+   def index(request):
+   return HttpResponse("Hello World!")
+
+
+   def resume(request):
+   return render(request, 'resume.html')
+   ```
+   * **Create mapping (urls, views, models and templates)**
+    * **MTV (Model-Template-View) mapping**
+     * M stands for “Model,” the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data.
+     * T stands for “Template,” the presentation layer. This layer contains presentation-related decisions: how something should be displayed on a Web page or other type of document.
+     * V stands for “View,” the business logic layer. This layer contains the logic that accesses the model and defers to the appropriate template(s). You can think of it as the bridge between models and templates.
+
+
+   * **settings.py**
+   ```python
+   TEMPLATES = [
+   {
+   'BACKEND': 'django.template.backends.django.DjangoTemplates',
+   'DIRS': [os.path.join(BASE_DIR, 'templates')],
+   'APP_DIRS': True,
+   'OPTIONS': {
+   'context_processors': [
+   'django.template.context_processors.debug',
+   'django.template.context_processors.request',
+   'django.contrib.auth.context_processors.auth',
+   'django.contrib.messages.context_processors.messages',
+   ],
+   },
+   },
+   ]
+   ```
+   * **urls.py**
+   ```python
+   from django.contrib import admin
+   from django.urls import path, include
+
+   urlpatterns = [
+   path('admin/', admin.site.urls),
+   path('', include('first_app.urls')),
+   ]
+   ```
+   * **templates/base.html**
+   Templates are a key part to understand how Django really works and interact with you website
+   Inside HTML we will use templates tags (Django Template Variable) with their special syntax
+   The syntax allows you to inject dynamic content that your Django  App’s views will produce, effecting the final HTML 
+   ```
+   <!DOCTYPE html>
+   <html lang="en" dir="ltr">
+
+   <head>
+   <meta charset="utf-8">
+   <title></title>
+   </head>
+
+   <body>
+   <h1>This is my resume</h1>
+   </body>
+
+   </html>
+   ```
+   * **models.py**
+   Connect templates with models so you can  display data created dynamically from database
+   curriculum/urls.py
+   ```
+   from django.urls import path
+   from first_app import views
+
+   urlpatterns = [
+   path('', views.index, name='index'),
+   path('resume', views.resume, name='resume'),
+   ]
+   ```
+   * **curriculum/views.py** -Here we will create a dictionary that will have a content that will be injected  in HTML template. Takes in the key that will be the variable from html.
+   ```
+   from django.shortcuts import render
+   from django.http import HttpResponse
+   # Create your views here.
+
+
+   def index(request):
+   return HttpResponse("Hello World!")
+
+
+   def resume(request):
+   my_dict = {
+   'insert_me': 'Hello there, I am from views.py'
+   }
+   return render(request, 'curriculum/resume.html')
+   ```
+   * **curriculum/templates/curriculum/resume.html** -This will help us to keep the project modular by create a subfolder for each app with their name
+   ```
+   <!DOCTYPE html>
+   <html lang="en" dir="ltr">
+
+   <head>
+   <meta charset="utf-8">
+   <title></title>
+   </head>
+
+   <body>
+   <h1>This is my resume</h1>
+   <h3>{{ insert_me }}</h3>
+   </body>
+
+   </html>
+   ```
+### **Commit your work**
+* git status
+* git add .
+* git status
+* git commit -m "Initial commit"
+* git push -u origin master
+
+## Course 3
+
+* **Start your word day!**
+ * git pull
+ 
+* **The staticfiles app** - https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/
+Staticfiles are files that will not change. Here will be saved the CSS, JavaScript, images
+ * create folder
+  * static
+   * css
+    * my_style.css
+   * img
+    *django.jpeg
+   *js
+* **settings.py**
 ```python
-from django.conf.urls import url
-from django.contrib import admin
-from curriculum import views
-
-urlpatterns = [
-url(r'^admin/', admin.site.urls),
-url(r'^$', views.index, name='index'),
-url(r'^resume/', views.resume, name=resume),
-]
-```
-Django 2.0  format:
-
-```python
-from django.contrib import admin
-from django.urls import path
-from curriculum import views
-
-urlpatterns = [
-path('admin/', admin.site.urls),
-path('', views.index, name='index'),
-path('resume', views.resume, name='resume'),
-]
-```
-Mapping with include()
-Under this method each application will own a urls.py file and will keep our project’s urls.py clean and modular
-urls.py
-```python
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-path('admin/', admin.site.urls),
-path('', include('curriculum.urls')),
-]
-```
-curriculum/urls.py
-```python
-from django.urls import path
-from curriculum import views
-
-urlpatterns = [
-path('', views.index, name='index'),
-path('resume', views.resume, name='resume'),
-]
-```
-curriculum/views.py
-```
-from django.shortcuts import render
-from django.http import HttpResponse
-
-
-def index(request):
-return HttpResponse("Hello World!")
-
-
-def resume(request):
-return render(request, 'resume.html')
-```
-Create mapping (urls, views, models and templates)
-MTV (Model-Template-View) mapping
-M stands for “Model,” the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data.
-T stands for “Template,” the presentation layer. This layer contains presentation-related decisions: how something should be displayed on a Web page or other type of document.
-V stands for “View,” the business logic layer. This layer contains the logic that accesses the model and defers to the appropriate template(s). You can think of it as the bridge between models and templates.
-
-
-settings.py
-```python
-TEMPLATES = [
-{
-'BACKEND': 'django.template.backends.django.DjangoTemplates',
-'DIRS': [os.path.join(BASE_DIR, 'templates')],
-'APP_DIRS': True,
-'OPTIONS': {
-'context_processors': [
-'django.template.context_processors.debug',
-'django.template.context_processors.request',
-'django.contrib.auth.context_processors.auth',
-'django.contrib.messages.context_processors.messages',
-],
-},
-},
-]
-```
-urls.py
-```python
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-path('admin/', admin.site.urls),
-path('', include('first_app.urls')),
-]
-```
-templates/base.html
-Templates are a key part to understand how Django really works and interact with you website
-Inside HTML we will use templates tags (Django Template Variable) with their special syntax
-The syntax allows you to inject dynamic content that your Django  App’s views will produce, effecting the final HTML 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-<meta charset="utf-8">
-<title></title>
-</head>
-
-<body>
-<h1>This is my resume</h1>
-</body>
-
-</html>
-models.py
-Connect templates with models so you can  display data created dynamically from database
-curriculum/urls.py
-from django.urls import path
-from first_app import views
-
-urlpatterns = [
-path('', views.index, name='index'),
-path('resume', views.resume, name='resume'),
-]
-curriculum/views.py
-Here we will create a dictionary that will have a content that will be injected  in HTML template. Takes in the key that will be the variable from html.
-from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
-
-
-def index(request):
-return HttpResponse("Hello World!")
-
-
-def resume(request):
-my_dict = {
-'insert_me': 'Hello there, I am from views.py'
-}
-return render(request, 'curriculum/resume.html')
-
-curriculum/templates/curriculum/resume.html
-This will help us to keep the project modular by create a subfolder for each app with their name
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-<meta charset="utf-8">
-<title></title>
-</head>
-
-<body>
-<h1>This is my resume</h1>
-<h3>{{ insert_me }}</h3>
-</body>
-
-</html>
-Commit your work
-Save your changes to GitHub
-Course 3
-Recap
-Atom and python versions
-Create a new virtual environment
-Start a new project
-Project folders structure
-Run a Django server
-Create a superuser to access admin
-Setup project to use local_settings
-Save your venvs packages versions in a requirements.txt
-GitHub - first repository
-Start a new app
-Create mapping - single and with include()
-Prepare the working environment
-Activate your venv
-Move to your project folder
-Verify your repository
-Pull from GitLab
-The staticfiles app
-https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/
-Staticfiles are files that will not change.
-Here will be saved the CSS, JavaScript, images
-create folder
-static
-css
-my_style.css
-images
-django.jpeg
-js
-settings.py
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static_root')
 STATICFILES_DIRS = [
@@ -398,11 +387,12 @@ os.path.join(BASE_DIR, 'static'),
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'media_root')
-resume.html
-link your html files to static files by adding this tag {% load staticfiles %} at the top
+```
+* **resume.html** - link your html files to static files by adding this tag {% load staticfiles %} at the top
 insert a image use <img src="{% static 'images/django.jpeg' %}">
-tag {{ }} is used for simple text injection
-tag {% %} is used for more complex injections and logic
+ * tag {{ }} is used for simple text injection
+ * tag {% %} is used for more complex injections and logic
+ ```
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en" dir="ltr">
@@ -474,7 +464,9 @@ base.html
 </body>
 
 </html>
-index.html
+```
+* **index.html**
+```
 {% extends 'base.html' %}
 
 {% block content %}
@@ -507,50 +499,39 @@ ultricies sit amet arcu ut, interdum pellentesque diam. Cras tempus risus quis a
 </div>
 
 {% endblock %}
-Commit your work
-Save your changes to GitHub
-Course 4
-Recap
-Atom and python versions
-Create a new virtual environment
-Start a new project
-Project folders structure
-Run a Django server
-Create a superuser to access admin
-Setup project to use local_settings
-Save your venvs packages versions in a requirements.txt
-GitHub - first repository
-Start a new app
-Create mapping - single and with include()
-Staticfiles App
-Template extending
-Prepare the working environment
-Activate your venv
-Move to your project folder
-Verify your repository
-Pull from GitLab
-MTV (Model-Template-View)
-M stands for “Model,” the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data.
-T stands for “Template,” the presentation layer. This layer contains presentation-related decisions: how something should be displayed on a Web page or other type of document.
-V stands for “View,” the business logic layer. This layer contains the logic that accesses the model and defers to the appropriate template(s). You can think of it as the bridge between models and templates.
+```
+### Commit your work
+* Git status
+* git add .
+* git status
+* git commit -m "Initial commit"
+* git push -u origin master
+
+## Course 4
+
+* **MTV (Model-Template-View) mapping**
+ * M stands for “Model,” the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data.
+ * T stands for “Template,” the presentation layer. This layer contains presentation-related decisions: how something should be displayed on a Web page or other type of document.
+ * V stands for “View,” the business logic layer. This layer contains the logic that accesses the model and defers to the appropriate template(s). You can think of it as the bridge between models and templates.
 
 
 
-Django Models
-connect to SQlite3, Postgresql, MySQL
-this class will be a subclass of Django built-in class: django.db.models.Model
-each attribute of the class represents a field, which is just like a column name  with constraints in SQL
-SQL is a giant table with each column represent a field ass CharField, IntegerField, DataField with constraints as max_length, default 
-relationship between them and we use the concept of Foreign Keys and Primary Keys
-Add libraries
-django-ckeditor
-https://django-ckeditor.readthedocs.io/en/latest/
-pip install django-ckeditor
+* **Django Models**
+ * Details
+  * connect to SQlite3, Postgresql, MySQL
+  * this class will be a subclass of Django built-in class: django.db.models.Model
+  * each attribute of the class represents a field, which is just like a column name  with constraints in SQL
+  * SQL is a giant table with each column represent a field ass CharField, IntegerField, DataField with constraints as max_length, default 
+  * relationship between them and we use the concept of Foreign Keys and Primary Keys
+ *Add libraries
+  * django-ckeditor -https://django-ckeditor.readthedocs.io/en/latest/
+  ```
+  pip install django-ckeditor
+  ```
 
 
-
-Create your Model
-def __str__(self): is a method to return his actual name
+* **Create your Model** -def __str__(self): is a method to return his actual name
+```
 from django.db import models
 from ckeditor.fields import RichTextField
 
@@ -565,24 +546,28 @@ description = RichTextField()
 
 def __str__(self):
 return self.company
-migrate the database
-this will create your database
+```
+* **migrate the database** -this will create your database
+```python
 python mange.py migrate
 python manage.py makemigrations
-relationship types
-One-to-One
-One-to-Many
-
-Many-to-Many
-Add Model to Admin
-register your model to your app admin.py file
+```
+* relationship types
+ * One-to-One
+ * One-to-Many
+ * Many-to-Many
+*Add Model to Admin
+* register your model to your app admin.py file
+```python
 from django.contrib import admin
-from curriculum.models import Experience
 
+from curriculum.models import Experience
+```
 admin.site.register(Experience)
 Add data to db from Admin
 Generate a loop on class
-Base.html
+* **base.html**
+```
 <!doctype html>
 <html lang="en">
 <head>
@@ -625,7 +610,9 @@ Base.html
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="{% static 'js/resume.js' %}"></script>
 </html>
-navbar.html
+```
+* **navbar.html**
+```
 {% load staticfiles %}
 
 
@@ -700,7 +687,9 @@ Adrian Helerea
 </div>
 </nav>
 </div>
-Experience.html
+```
+* **experience.html**
+```
 {% load staticfiles %}
 
 
@@ -767,7 +756,9 @@ Python skills in Computer Vision.
 </div>
 </div>
 </div>
-resume.css
+```
+* **resume.css**
+```css
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 body {
@@ -896,7 +887,11 @@ from curriculum import views
 urlpatterns = [
 path('', views.home, name='home'),
 ]
+```
 
-
-Commit your work
-Save your changes to GitHub
+### **Commit your work**
+* Git status
+* git add .
+* git status
+* git commit -m "Initial commit"
+* git push -u origin master

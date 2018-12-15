@@ -1,56 +1,57 @@
-# Project pre-installing:
-## Install Atom from https://atom.io/
-## Atom packages
-* Atom-beautify
-* Platformio-ide-terminal
-* Atom-django
-* Autocomplete-python 
-* Django-templates
-## Register to GitHub at https://github.com/
+# myResume
+## Project pre-installing:
+* Install Atom from https://atom.io/
+    * Atom packages
+    * Atom-beautify
+    * Platformio-ide-terminal
+    * Atom-django
+    * Autocomplete-python 
+    * Django-templates
+* Register to GitHub at https://github.com/
 
-# Course 1
-## Introduction
-### Check versions:
-```
-python --version
-python -m django --version
-```
-### About Django?
-Go to https://www.djangoproject.com/
-### What is Django?
-Django is a Python Web Framework
-### What is a Web Framework?
-Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
-HTML, CSS, JS, bootstraps for responsive are integrated together, uploaded and hosted
-### What will me build?
-Open http://hellyworld.pythonanywhere.com/
-We will make an web app with our resume
-## Let’s build a project
-### Create a new virtual environment 
-Allow you to have a specific version of the packages: Python, Django, other API’s
-### Open a terminal in Atom
-* Move to .venvs folder
-* Create the new venv
-```
-virtualenv myResume
-```
-* Activate the new venv
-```
-source .../myResume/bin/activate
-pip freeze
-```
-* Install Django 2.1.3
-With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
-```
-pip install django
-pip freeze
-```
-* Start a new project.
-* Move to projects folder
-* Start the new project
-```
-django-admin startproject myResume
-```
+## Course 1
+* Introduction
+    * Check versions:
+    ```
+    python --version
+    python -m django --version
+    ```
+    * About Django?
+    Go to https://www.djangoproject.com/
+    * What is Django?
+    Django is a Python Web Framework
+    * What is a Web Framework?
+    Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+    HTML, CSS, JS, bootstraps for responsive are integrated together, uploaded and hosted
+    * What will me build?
+    Open http://hellyworld.pythonanywhere.com/
+    We will make an web app with our resume
+* **Let’s build a project**
+    * Create a new virtual environment
+    Allow you to have a specific version of the packages: Python, Django, other API’s
+    * Open a terminal in Atom
+        * Move to .venvs folder
+        * Create the new venv
+        ```
+        virtualenv myResume
+        ```
+    * Activate the new venv
+    ```
+    source .../myResume/bin/activate
+    pip freeze
+    ```
+    * Install Django 2.1.3
+    With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
+    ```
+    pip install django
+    pip freeze
+    ```
+    * Start a new project.
+        * Move to projects folder
+        * Start the new project
+        ```
+        django-admin startproject myResume
+        ```
 Project folders structure
 myResume
 __init__.py

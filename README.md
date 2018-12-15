@@ -184,7 +184,7 @@ python manage.py startapp curriculum
   * Simple mapping direct to a view
    * **curriculum/views.py**
    Import HttpResponse object from django.hhtp module and each view for this application will exist in that views.py as it is own individual function. In this instance we created index function. Each function has at least one argument. As a conventional we call it “request but can be named whatever. Returns a HttpResponse  with a text later will be a html. We need to map this view to the urls.py
-   ```
+   ```python
    from django.shortcuts import render
    from django.http import HttpResponse
 
@@ -244,7 +244,7 @@ python manage.py startapp curriculum
    ]
    ```
    * **curriculum/views.py**
-   ```
+   ```python
    from django.shortcuts import render
    from django.http import HttpResponse
 
@@ -293,7 +293,7 @@ python manage.py startapp curriculum
    Templates are a key part to understand how Django really works and interact with you website
    Inside HTML we will use templates tags (Django Template Variable) with their special syntax
    The syntax allows you to inject dynamic content that your Django  App’s views will produce, effecting the final HTML 
-   ```
+   ```html5
    <!DOCTYPE html>
    <html lang="en" dir="ltr">
 
@@ -311,7 +311,7 @@ python manage.py startapp curriculum
    * **models.py**
    Connect templates with models so you can  display data created dynamically from database
    curriculum/urls.py
-   ```
+   ```python
    from django.urls import path
    from first_app import views
 
@@ -321,7 +321,7 @@ python manage.py startapp curriculum
    ]
    ```
    * **curriculum/views.py** -Here we will create a dictionary that will have a content that will be injected  in HTML template. Takes in the key that will be the variable from html.
-   ```
+   ```python
    from django.shortcuts import render
    from django.http import HttpResponse
    # Create your views here.
@@ -338,7 +338,7 @@ python manage.py startapp curriculum
    return render(request, 'curriculum/resume.html')
    ```
    * **curriculum/templates/curriculum/resume.html** -This will help us to keep the project modular by create a subfolder for each app with their name
-   ```
+   ```html5
    <!DOCTYPE html>
    <html lang="en" dir="ltr">
 
@@ -390,7 +390,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'media_root')
 insert a image use <img src="{% static 'images/django.jpeg' %}">
  * tag {{ }} is used for simple text injection
  * tag {% %} is used for more complex injections and logic
- ```
+ ```html5
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en" dir="ltr">
@@ -464,7 +464,7 @@ base.html
 </html>
 ```
 * **index.html**
-```
+```html5
 {% extends 'base.html' %}
 
 {% block content %}
@@ -529,7 +529,7 @@ ultricies sit amet arcu ut, interdum pellentesque diam. Cras tempus risus quis a
 
 
 * **Create your Model** -def __str__(self): is a method to return his actual name
-```
+```python
 from django.db import models
 from ckeditor.fields import RichTextField
 
@@ -565,7 +565,7 @@ admin.site.register(Experience)
 Add data to db from Admin
 Generate a loop on class
 * **base.html**
-```
+```html5
 <!doctype html>
 <html lang="en">
 <head>
@@ -610,7 +610,7 @@ Generate a loop on class
 </html>
 ```
 * **navbar.html**
-```
+```html5
 {% load staticfiles %}
 
 
@@ -687,7 +687,7 @@ Adrian Helerea
 </div>
 ```
 * **experience.html**
-```
+```html5
 {% load staticfiles %}
 
 

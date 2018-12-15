@@ -390,7 +390,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'media_root')
 insert a image use <img src="{% static 'images/django.jpeg' %}">
  * tag {{ }} is used for simple text injection
  * tag {% %} is used for more complex injections and logic
- ```html5
+ ```django
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en" dir="ltr">

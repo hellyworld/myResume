@@ -164,7 +164,7 @@ git add .
 git commit -m "Initial commit"
 git push -u origin master
 ```
-Course 2
+## Course 2
 Pull from GitLab
 Start a new Django app
 python manage.py startapp curriculum
@@ -249,7 +249,9 @@ urlpatterns = [
 path('', views.index, name='index'),
 path('resume', views.resume, name='resume'),
 ]
+```
 curriculum/views.py
+```
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -260,6 +262,7 @@ return HttpResponse("Hello World!")
 
 def resume(request):
 return render(request, 'resume.html')
+```
 Create mapping (urls, views, models and templates)
 MTV (Model-Template-View) mapping
 M stands for “Model,” the data access layer. This layer contains anything and everything about the data: how to access it, how to validate it, which behaviors it has, and the relationships between the data.
@@ -268,6 +271,7 @@ V stands for “View,” the business logic layer. This layer contains the logic
 
 
 settings.py
+```python
 TEMPLATES = [
 {
 'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -283,7 +287,9 @@ TEMPLATES = [
 },
 },
 ]
+```
 urls.py
+```python
 from django.contrib import admin
 from django.urls import path, include
 
@@ -291,6 +297,7 @@ urlpatterns = [
 path('admin/', admin.site.urls),
 path('', include('first_app.urls')),
 ]
+```
 templates/base.html
 Templates are a key part to understand how Django really works and interact with you website
 Inside HTML we will use templates tags (Django Template Variable) with their special syntax

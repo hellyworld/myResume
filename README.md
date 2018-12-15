@@ -1,118 +1,118 @@
 # myResume
-## Project pre-installing:
-* **Install Atom** from https://atom.io/
-* **Atom packages**
-  * Atom-beautify
-  * Platformio-ide-terminal
-  * Atom-django
-  * Autocomplete-python 
-  * Django-templates
-* **Register to GitHub** at https://github.com/
+    ## Project pre-installing:
+        * **Install Atom** from https://atom.io/
+        * **Atom packages**
+            * Atom-beautify
+            * Platformio-ide-terminal
+            * Atom-django
+            * Autocomplete-python 
+            * Django-templates
+        * **Register to GitHub** at https://github.com/
 
 ## Course 1
 * **Introduction**
-    * Check versions:
-    ```
-    python --version
-    python -m django --version
-    ```
-    * **About Django?** - Go to https://www.djangoproject.com/
-    * **What is Django?** - Django is a Python Web Framework
-    * **What is a Web Framework?** - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. HTML, CSS, JS, bootstraps for responsive are integrated together, uploaded and hosted
-    * **What will me build?** - We will make an web app with our resume. Open http://hellyworld.pythonanywhere.com/ 
+* Check versions:
+```
+python --version
+python -m django --version
+```
+* **About Django?** - Go to https://www.djangoproject.com/
+* **What is Django?** - Django is a Python Web Framework
+* **What is a Web Framework?** - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. HTML, CSS, JS, bootstraps for responsive are integrated together, uploaded and hosted
+* **What will me build?** - We will make an web app with our resume. Open http://hellyworld.pythonanywhere.com/ 
 * **Let’s build a project**
-    * **Create a new virtual environment** - Allow you to have a specific version of the packages: Python, Django, other API
-      * Open a terminal in Atom
-      * Move to .venvs folder
-      * Create the new venv
-      ```
-      virtualenv myResume
-      ```
-    * **Activate the new venv**
-    ```
-    source .../myResume/bin/activate
-    pip freeze
-    ```
-    * Install Django 2.1.3 - With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
-    ```
-    pip install django
-    pip freeze
-    ```
-    * **Start a new project.**
-      * Move to projects folder
-      * Start the new project
-      ```
-      django-admin startproject myResume
-      ```
-      * **Project folders structure**
-        * myResume
-        * __init__.py
-          * This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package  
-        * settings.py
-          * This is where you will store all your project settings
-        * urls.py
-          * This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
-        * wsgi.py
-          * This is a Python script that acts as the Web Server Gateway Interface. It will later on help us deploy our web app to production.
-        * manage.py
-          * This is a Python script that will use a lot. It will be associates with many commands as we build our web app. Will execute parts of django from your project.
-    * **Run a Django server**
-      * Move to myResume folder
-      ```
-      python manage.py runserver
-      ```
-      ```
-      Performing system checks...
+* **Create a new virtual environment** - Allow you to have a specific version of the packages: Python, Django, other API
+* Open a terminal in Atom
+* Move to .venvs folder
+* Create the new venv
+```
+virtualenv myResume
+```
+* **Activate the new venv**
+```
+source .../myResume/bin/activate
+pip freeze
+```
+* Install Django 2.1.3 - With Django , it actually also installed a command line tool called: django-admin (useful to quickly run direct from command line)
+```
+pip install django
+pip freeze
+```
+* **Start a new project.**
+* Move to projects folder
+* Start the new project
+```
+django-admin startproject myResume
+```
+* **Project folders structure**
+* myResume
+* __init__.py
+* This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package  
+* settings.py
+* This is where you will store all your project settings
+* urls.py
+* This is a Python script that will store all the URL patterns for your project. Basically the different pages of your web application and how to connect to the end user. It use regular expressions.
+* wsgi.py
+* This is a Python script that acts as the Web Server Gateway Interface. It will later on help us deploy our web app to production.
+* manage.py
+* This is a Python script that will use a lot. It will be associates with many commands as we build our web app. Will execute parts of django from your project.
+* **Run a Django server**
+* Move to myResume folder
+```
+python manage.py runserver
+```
+```
+Performing system checks...
 
-      System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
 
 
-      You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, cont
-      enttypes, sessions.
-      Run 'python manage.py migrate' to apply them.
+You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, cont
+enttypes, sessions.
+Run 'python manage.py migrate' to apply them.
 
-      November 15, 2018 - 13:55:34
-      Django version 2.1.3, using settings 'first_project.settings'
-      Starting development server at http://127.0.0.1:8000/
-      Quit the server with CONTROL-C.
-      ```
-      * Copy to your browser and run http://127.0.0.1:8000/ and BIG CONGRATULATION TO YOU!
-      * Warnings about migrations - A migrations allows you to move databases from one design to another, this is also reversible. You will migrate your database!
-      * migrate your database
-      ```
-      python manage.py migrate
-      ```
-      ```
-      Operations to perform:
-      Apply all migrations: admin, auth, contenttypes, sessions
+November 15, 2018 - 13:55:34
+Django version 2.1.3, using settings 'first_project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+* Copy to your browser and run http://127.0.0.1:8000/ and BIG CONGRATULATION TO YOU!
+* Warnings about migrations - A migrations allows you to move databases from one design to another, this is also reversible. You will migrate your database!
+* migrate your database
+```
+python manage.py migrate
+```
+```
+Operations to perform:
+Apply all migrations: admin, auth, contenttypes, sessions
 
-      Running migrations:
-      Applying contenttypes.0001_initial... OK
-      Applying auth.0001_initial... OK
-      Applying admin.0001_initial... OK
-      Applying admin.0002_logentry_remove_auto_add... OK
-      Applying admin.0003_logentry_add_action_flag_choices... OK
-      Applying contenttypes.0002_remove_content_type_name... OK
-      Applying auth.0002_alter_permission_name_max_length... OK
-      Applying auth.0003_alter_user_email_max_length... OK
-      Applying auth.0004_alter_user_username_opts... OK
-      Applying auth.0005_alter_user_last_login_null... OK
-      Applying auth.0006_require_contenttypes_0002... OK
-      Applying auth.0007_alter_validators_add_error_messages... OK
-      Applying auth.0008_alter_user_username_max_length... OK
-      Applying auth.0009_alter_user_last_name_max_length... OK
-      Applying sessions.0001_initial... OK
-      Create a superuser and access admin page
-      python manage.py createsuperuser
-      access http://127.0.0.1:8000/admin
-      ```
-      * Create a superuser and access admin page
-      ``` python
-      python manage.py createsuperuser
-      ```
-      ```
-      access http://127.0.0.1:8000/admin
-      ```
+Running migrations:
+Applying contenttypes.0001_initial... OK
+Applying auth.0001_initial... OK
+Applying admin.0001_initial... OK
+Applying admin.0002_logentry_remove_auto_add... OK
+Applying admin.0003_logentry_add_action_flag_choices... OK
+Applying contenttypes.0002_remove_content_type_name... OK
+Applying auth.0002_alter_permission_name_max_length... OK
+Applying auth.0003_alter_user_email_max_length... OK
+Applying auth.0004_alter_user_username_opts... OK
+Applying auth.0005_alter_user_last_login_null... OK
+Applying auth.0006_require_contenttypes_0002... OK
+Applying auth.0007_alter_validators_add_error_messages... OK
+Applying auth.0008_alter_user_username_max_length... OK
+Applying auth.0009_alter_user_last_name_max_length... OK
+Applying sessions.0001_initial... OK
+Create a superuser and access admin page
+python manage.py createsuperuser
+access http://127.0.0.1:8000/admin
+```
+* Create a superuser and access admin page
+``` python
+python manage.py createsuperuser
+```
+```
+access http://127.0.0.1:8000/admin
+```
 
 Setup proiect to use local_settings
 local_settings.py
@@ -637,34 +637,34 @@ navbar.html
 <div class="collapse navbar-collapse" id="navbarCollapse">
 <ul class="nav navbar-nav pull-sm-left">
 <li class="nav-item">
-    <a class="navbar-brand" href="#brand">
-        Adrian Helerea
-    </a>
+<a class="navbar-brand" href="#brand">
+Adrian Helerea
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="#experience">
-        <span class="fas fa-briefcase mr-2" aria-hidden="true"></span>Experience
-    </a>
+<a class="nav-link" href="#experience">
+<span class="fas fa-briefcase mr-2" aria-hidden="true"></span>Experience
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="#education">
-        <span class="fas fa-graduation-cap mr-2" aria-hidden="true"></span>Education
-    </a>
+<a class="nav-link" href="#education">
+<span class="fas fa-graduation-cap mr-2" aria-hidden="true"></span>Education
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="#skills">
-        <span class="fas fa-wrench mr-2" aria-hidden="true"></span>Skills
-    </a>
+<a class="nav-link" href="#skills">
+<span class="fas fa-wrench mr-2" aria-hidden="true"></span>Skills
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="#strength">
-        <span class="fas fa-bolt mr-2" aria-hidden="true"></span>Strengths
-    </a>
+<a class="nav-link" href="#strength">
+<span class="fas fa-bolt mr-2" aria-hidden="true"></span>Strengths
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="#contact">
-        <span class="fas fa-paper-plane mr-2" aria-hidden="true"></span>Contact
-    </a>
+<a class="nav-link" href="#contact">
+<span class="fas fa-paper-plane mr-2" aria-hidden="true"></span>Contact
+</a>
 </li>
 </ul>
 </div>
@@ -673,24 +673,24 @@ navbar.html
 <div>
 <ul class="nav pull-sm-right">
 <li class="nav-item">
-    <a class="nav-link" href="mailto:helereaiadrian@gmail.com">
-        <span class="fas fa-envelope" aria-hidden="true"></span>
-    </a>
+<a class="nav-link" href="mailto:helereaiadrian@gmail.com">
+<span class="fas fa-envelope" aria-hidden="true"></span>
+</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="">
-        <span class="fas fa-print" onclick="printPage()" aria-hidden="true"></span>
-    </a>
+<a class="nav-link" href="">
+<span class="fas fa-print" onclick="printPage()" aria-hidden="true"></span>
+</a>
 </li>
 <!--<li class="nav-item">-->
-    <!--<a class="nav-link" href="#">-->
-        <!--<span class="fas fa-cloud-download-alt" aria-hidden="true"></span>-->
-    <!--</a>-->
+<!--<a class="nav-link" href="#">-->
+<!--<span class="fas fa-cloud-download-alt" aria-hidden="true"></span>-->
+<!--</a>-->
 <!--</li>-->
 <li class="nav-item">
-    <a class="nav-link" href="https://www.linkedin.com/in/adrianhelerea" target="_blank">
-        <span class="fab fa-linkedin" aria-hidden="true"></span>
-    </a>
+<a class="nav-link" href="https://www.linkedin.com/in/adrianhelerea" target="_blank">
+<span class="fab fa-linkedin" aria-hidden="true"></span>
+</a>
 </li>
 </ul>
 </div>
@@ -713,9 +713,9 @@ Experience.html
 <h6 class="text-sm-left text-md-right text-muted">{{ experience.location }}</h6>
 <h6 class="text-sm-left text-md-right text-muted">{{ experience.start_date|date:'M Y'}} -
 {% if experience.end_date is null %}
-    Present
+Present
 {% else %}
-    {{ experience.end_date|date:'M Y'}}
+{{ experience.end_date|date:'M Y'}}
 {% endif %}
 </h6>
 </div>
